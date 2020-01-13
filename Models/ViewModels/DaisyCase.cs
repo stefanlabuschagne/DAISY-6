@@ -119,14 +119,59 @@ namespace DAISY_6.Models.ViewModels
     public class SearchCase
     {
 
+        // Call Report
 
+        [Display(Name="First Name")]
+        public string Name { get; set; }
 
+        [Display(Name = "Surname")]
+        public string Surname { get; set; }
+
+        [Display(Name = "Reason for Call")]
+        public string CallReason { get; set; }
+
+        [Display(Name = "Age Group")]
+        public string Age { get; set; }
+
+        [Display(Name = "City")]
+        public string City { get; set; }
+
+        [Display(Name = "Province")]
+        public string Province { get; set; }
+
+        [Display(Name = "Gender")]
+        public string Sex { get; set; }
+
+        [Display(Name = "Race")]
+        public string Race { get; set; }
+
+        [Display(Name = "Counsellor")]
+        public string Counsellor { get; set; }
+
+        [Display(Name = "Telephone")]
+        public string Telephone { get; set; }
+
+        [Display(Name = "From: (yyyy-mm-dd)")]
+        public string FromDate { get; set; }
+
+        [Display(Name = "To: (yyyy-mm-dd)")]
+        public string ToDate { get; set; }
+
+        [Display(Name = "Search Phrase:")]
+        public string SearchPhrase { get; set; }
+
+        [Display(Name = "Occupation")]
+        public string Occupation { get; set; }
+
+        [Display(Name = "Call Time")]
+        public string CallTimeOfDay { get; set; }
+
+        [Display(Name = "Helpline")]
+        public string Helpline { get; set; }
+
+        [Display(Name = "List Summary Details Only")]
+        public Boolean SummanyDetailsOnly { get; set; }
 
     }
-
-
-
-
-
 
 }
