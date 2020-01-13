@@ -1,103 +1,106 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace DAISY_6.Models.ViewModels
 {
     public class DaisyCase
     {
-        public string Name;
-        public string Surname;
-        public  string   Age ;
-        public  string   Sex ;
-        public  string   Race ;
-        public  string   Occupation ;
-        public  string   MedicalAid ;
-        public  string   Medication ;
-        public  string   Address ;
-        public  string   City ;
-        public  string   Province ;
-        public  string   PostalCode ;
-        public  string   Telephone1 ;
-        public  string   Telephone2 ;
-        public  string   EmailAddress ;
-        public  string   Suburb ;
-        public  string   DLLocation ;
-        public  string   DLType ;
-        public  string   DLSource ;
-        public  string   DLStudentNumber ;
-        public  string   Counsellor  ;
-        public  string   CallDate;
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        public string Surname{ get; set; } 
+        public  string   Age { get; set; } 
+        public  string   Sex { get; set; } 
+        public  string   Race { get; set; } 
+        public  string   Occupation { get; set; } 
+        public  string   MedicalAid { get; set; } 
+        public  string   Medication { get; set; } 
+        public  string   Address { get; set; } 
+        public  string   City { get; set; } 
+        public  string   Province { get; set; } 
+        public  string   PostalCode { get; set; } 
+        public  string   Telephone1 { get; set; } 
+        public  string   Telephone2 { get; set; } 
+        public  string   EmailAddress { get; set; } 
+        public  string   Suburb { get; set; } 
+        public  string   DLLocation { get; set; } 
+        public  string   DLType { get; set; } 
+        public  string   DLSource { get; set; } 
+        public  string   DLStudentNumber { get; set; } 
+        public  string   Counsellor  { get; set; } 
+        public  string   CallDate{ get; set; } 
 
-        public Boolean ReasonADHD;
+        public Boolean ReasonADHD{ get; set; } 
 
-        public Boolean  ReasonAlzheimersDementia ;
-        public Boolean  ReasonAnxiety ;
-        public Boolean  ReasonBipolar ;
-        public Boolean  ReasonDebtPovertyUnemployment ;
-        public Boolean  ReasonDepression ;
-        public Boolean  ReasonEatingDisoirder ;
-        public Boolean  ReasonHIVAIDS ;
-        public Boolean  ReasonInformation ;
-        public Boolean  ReasonLossGriefLoneliness ;
-        public Boolean  ReasonNone ;
-        public Boolean  ReasonOCD ;
-        public Boolean  ReasonOtherIllness ;
-        public Boolean  ReasonPhysicalEmotionalAbuse ;
-        public Boolean  ReasonPostNatalDepression ;
-        public Boolean  ReasonPTSDTrauma ;
-        public Boolean  ReasonReationshipDomesticAbuse ;
-        public Boolean  ReasonSchizophrenia ;
-        public Boolean  ReasonSelfMutilation ;
-        public Boolean  ReasonSexualAbuseRape ;
-        public Boolean  ReasonSleepingDisorder ;
-        public Boolean  ReasonSocialPhobia ;
-        public Boolean  ReasonStress ;
-        public Boolean  ReasonSubstanceAbuse ;
-        public Boolean  ReasonSuicide ;
-        public Boolean  ReferDASGFaceToFace ;
-        public Boolean  ReferGP ;
-        public Boolean  ReferGovHospital ;
-        public Boolean  ReferLiteratureWebsite ;
-        public Boolean  ReferNone ;
-        public Boolean  ReferOther ;
-        public Boolean  ReferOtherNGOHelpline ;
-        public Boolean  ReferPoliceStation ;
-        public Boolean  ReferPrivateHospital ;
-        public Boolean  ReferPsychiatrist ;
-        public Boolean  ReferPsychologist ;
-        public Boolean  ReferRapeCrisis ;
-        public Boolean  ReferShelter ;
-        public Boolean  ReferSocialWorker ;
-        public Boolean  ReferSupportGroup ;
-        public Boolean  ReferTraumaCentre ;
+        public Boolean  ReasonAlzheimersDementia { get; set; } 
+        public Boolean  ReasonAnxiety { get; set; } 
+        public Boolean  ReasonBipolar { get; set; } 
+        public Boolean  ReasonDebtPovertyUnemployment { get; set; } 
+        public Boolean  ReasonDepression { get; set; } 
+        public Boolean  ReasonEatingDisoirder { get; set; } 
+        public Boolean  ReasonHIVAIDS { get; set; } 
+        public Boolean  ReasonInformation { get; set; } 
+        public Boolean  ReasonLossGriefLoneliness { get; set; } 
+        public Boolean  ReasonNone { get; set; } 
+        public Boolean  ReasonOCD { get; set; } 
+        public Boolean  ReasonOtherIllness { get; set; } 
+        public Boolean  ReasonPhysicalEmotionalAbuse { get; set; } 
+        public Boolean  ReasonPostNatalDepression { get; set; } 
+        public Boolean  ReasonPTSDTrauma { get; set; } 
+        public Boolean  ReasonReationshipDomesticAbuse { get; set; } 
+        public Boolean  ReasonSchizophrenia { get; set; } 
+        public Boolean  ReasonSelfMutilation { get; set; } 
+        public Boolean  ReasonSexualAbuseRape { get; set; } 
+        public Boolean  ReasonSleepingDisorder { get; set; } 
+        public Boolean  ReasonSocialPhobia { get; set; } 
+        public Boolean  ReasonStress { get; set; } 
+        public Boolean  ReasonSubstanceAbuse { get; set; } 
+        public Boolean  ReasonSuicide { get; set; } 
+        public Boolean  ReferDASGFaceToFace { get; set; } 
+        public Boolean  ReferGP { get; set; } 
+        public Boolean  ReferGovHospital { get; set; } 
+        public Boolean  ReferLiteratureWebsite { get; set; } 
+        public Boolean  ReferNone { get; set; } 
+        public Boolean  ReferOther { get; set; } 
+        public Boolean  ReferOtherNGOHelpline { get; set; } 
+        public Boolean  ReferPoliceStation { get; set; } 
+        public Boolean  ReferPrivateHospital { get; set; } 
+        public Boolean  ReferPsychiatrist { get; set; } 
+        public Boolean  ReferPsychologist { get; set; } 
+        public Boolean  ReferRapeCrisis { get; set; } 
+        public Boolean  ReferShelter { get; set; } 
+        public Boolean  ReferSocialWorker { get; set; } 
+        public Boolean  ReferSupportGroup { get; set; } 
+        public Boolean  ReferTraumaCentre { get; set; } 
 
-        public string CallSummary;
+        [Required]
+        public string CallSummary{ get; set; } 
 
-        public Boolean  ReasonFrequentCaller ;
-        public Boolean  ReasonBullying ;
-        public Boolean  ReasonPregnancy ;
-        public Boolean  ReasonSexuality ;
-        public Boolean  ReferRehabilitationCentre ;
-        public Boolean  ReasonBorderlinePersonalityDisorder ;
-        public string   HelpLine;
-        public Boolean  ReasonOtherReason ;
-        public Boolean  ReasonFollowUp ;
-        public Boolean  ReferUniversityStudentWellness ;
-        public Boolean  ReferSadagHelpLine ;
-        public Boolean  ReferSelfHelp ;
-        public Boolean  ReferUber ;
-        public string   DLCallTimeOfDay;
-        public string   CalledOnBehalfOf;
-        public string ActionPoints;
-        public Boolean  ReasonRelationshipRomanticIssues ;
-        public Boolean  ReasonRelationshipFamilyIssues ;
-        public Boolean  ReferCompanyEAP ;
-        public Boolean  ReferUniversitySupportServices ;
-        public int   DistressRatingBegining ;
-        public int   DistressRatingEnd ;
-        public Boolean  ReasonAcademicStress ;
+        public Boolean  ReasonFrequentCaller { get; set; } 
+        public Boolean  ReasonBullying { get; set; } 
+        public Boolean  ReasonPregnancy { get; set; } 
+        public Boolean  ReasonSexuality { get; set; } 
+        public Boolean  ReferRehabilitationCentre { get; set; } 
+        public Boolean  ReasonBorderlinePersonalityDisorder { get; set; } 
+        public string   HelpLine{ get; set; } 
+        public Boolean  ReasonOtherReason { get; set; } 
+        public Boolean  ReasonFollowUp { get; set; } 
+        public Boolean  ReferUniversityStudentWellness { get; set; } 
+        public Boolean  ReferSadagHelpLine { get; set; } 
+        public Boolean  ReferSelfHelp { get; set; } 
+        public Boolean  ReferUber { get; set; } 
+        public string   DLCallTimeOfDay{ get; set; } 
+        public string   CalledOnBehalfOf{ get; set; } 
+        public string   ActionPoints{ get; set; } 
+        public Boolean  ReasonRelationshipRomanticIssues { get; set; } 
+        public Boolean  ReasonRelationshipFamilyIssues { get; set; } 
+        public Boolean  ReferCompanyEAP { get; set; } 
+        public Boolean  ReferUniversitySupportServices { get; set; } 
+        public int   DistressRatingBegining { get; set; } 
+        public int   DistressRatingEnd { get; set; } 
+        public Boolean  ReasonAcademicStress { get; set; } 
 
     }
 

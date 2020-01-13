@@ -23,7 +23,7 @@ namespace DAISY_6.Controllers
 
         public ActionResult DaisyCase()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Create Daisy Case";
 
             return View();
         }
