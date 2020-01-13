@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAISY 6", "DAISY 6.csproj", "{5422B296-F144-4A58-BB55-8AC247546097}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAISY API", "..\DAISY API\DAISY API.csproj", "{C9190976-9B42-4685-B9A1-B9F8BFC895A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5422B296-F144-4A58-BB55-8AC247546097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5422B296-F144-4A58-BB55-8AC247546097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5422B296-F144-4A58-BB55-8AC247546097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5422B296-F144-4A58-BB55-8AC247546097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9190976-9B42-4685-B9A1-B9F8BFC895A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9190976-9B42-4685-B9A1-B9F8BFC895A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9190976-9B42-4685-B9A1-B9F8BFC895A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9190976-9B42-4685-B9A1-B9F8BFC895A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4B61C3D-A1ED-484D-BBF9-88626D50F9A6}
+	EndGlobalSection
+EndGlobal
