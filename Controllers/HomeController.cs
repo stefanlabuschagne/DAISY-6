@@ -23,9 +23,12 @@ namespace DAISY_6.Controllers
 
         public ActionResult DaisyCase()
         {
+
             ViewBag.Message = "Create Daisy Case";
+            // Call The API To Update the DAISY DATBASE THROUGH THE Stored Proc
 
             return View();
+
         }
 
 
@@ -35,6 +38,7 @@ namespace DAISY_6.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+
         }
     }
 }
