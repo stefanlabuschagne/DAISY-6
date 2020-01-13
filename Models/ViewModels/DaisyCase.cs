@@ -7,5 +7,13 @@ namespace DAISY_6.Models.ViewModels
 {
     public class DaisyCase
     {
+
+
+        string Name;
+        string Surname;
+
+
+
+
     }
 }
