@@ -75,7 +75,7 @@ namespace DAISY_6.Models.ViewModels
         public Boolean  ReferSupportGroup { get; set; } 
         public Boolean  ReferTraumaCentre { get; set; } 
 
-        [Required]
+        [Required, MinLength(100), MaxLength(8000)]
         public string CallSummary{ get; set; } 
 
         public Boolean  ReasonFrequentCaller { get; set; } 
