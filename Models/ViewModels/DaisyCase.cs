@@ -316,7 +316,7 @@ namespace DAISY_6.Models.ViewModels
     }
 
 
-    public class EditCaller
+    public class EditCaller    
     {
 
         // Edit  Caller
