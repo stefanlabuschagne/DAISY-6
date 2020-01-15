@@ -54,74 +54,170 @@ namespace DAISY_6.Models.ViewModels
         public string Telephone1 { get; set; }
         [Required, Display(Name = "Telephone 2")]
         public string Telephone2 { get; set; }
-        [Required, Display(Name = "Email Address")]
+        [Required, Display(Name = "Email Address"),EmailAddress]
         public string EmailAddress { get; set; }
 
         [Required, Display(Name = "Academic Stress")]
         public Boolean ReasonAcademicStress { get; set; }
         [Required, Display(Name = "ADHD")]
         public Boolean ReasonADHD { get; set; }
+        [Required, Display(Name = "Alzheimers Dementia")]
         public Boolean ReasonAlzheimersDementia { get; set; }
+
+        [Required, Display(Name = "Anxiety")]
         public Boolean ReasonAnxiety { get; set; }
+
+        [Required, Display(Name = "Bipolar")]
         public Boolean ReasonBipolar { get; set; }
+
+        [Required, Display(Name = "Borderline Personality Disorder")]
         public Boolean ReasonBorderlinePersonalityDisorder { get; set; }
+
+        [Required, Display(Name = "Bullying")]
         public Boolean ReasonBullying { get; set; }
+
+        [Required, Display(Name = "Debt Poverty Unemployment")]
         public Boolean ReasonDebtPovertyUnemployment { get; set; }
+
+        [Required, Display(Name = "Depression")]
         public Boolean ReasonDepression { get; set; }
+
+        [Required, Display(Name = "Eating Disoirder")]
         public Boolean ReasonEatingDisoirder { get; set; }
+
+        [Required, Display(Name = "Bipolar")]
         public Boolean ReasonHIVAIDS { get; set; }
+
+        [Required, Display(Name = "Information")]
         public Boolean ReasonInformation { get; set; }
+
+        [Required, Display(Name = "Loss Grief Loneliness")]
         public Boolean ReasonLossGriefLoneliness { get; set; }
+
+        [Required, Display(Name = "None")]
         public Boolean ReasonNone { get; set; }
+
+        [Required, Display(Name = "OCD")]
         public Boolean ReasonOCD { get; set; }
+
+        [Required, Display(Name = "Other Illness")]
         public Boolean ReasonOtherIllness { get; set; }
+
+        [Required, Display(Name = "Physical Emotional Abuse")]
         public Boolean ReasonPhysicalEmotionalAbuse { get; set; }
+
+        [Required, Display(Name = "Post Natal Depression")]
         public Boolean ReasonPostNatalDepression { get; set; }
+
+        [Required, Display(Name = "Pregnancy")]
         public Boolean ReasonPregnancy { get; set; }
+
+        [Required, Display(Name = "PTSD Trauma")]
         public Boolean ReasonPTSDTrauma { get; set; }
+
+        [Required, Display(Name = "Reationship: Domestic Abuse")]
         public Boolean ReasonReationshipDomesticAbuse { get; set; }
+
+        [Required, Display(Name = "Relationship: Family Issues")]
         public Boolean ReasonRelationshipFamilyIssues { get; set; }
+
+        [Required, Display(Name = "Relationship: Romantic Issues")]
         public Boolean ReasonRelationshipRomanticIssues { get; set; }
+
+        [Required, Display(Name = "Schizophrenia")]
         public Boolean ReasonSchizophrenia { get; set; }
+
+        [Required, Display(Name = "Self Mutilation")]
         public Boolean ReasonSelfMutilation { get; set; }
+
+        [Required, Display(Name = "Sexual Abuse Rape")]
         public Boolean ReasonSexualAbuseRape { get; set; }
+
+        [Required, Display(Name = "Sleeping Disorder")]
         public Boolean ReasonSleepingDisorder { get; set; }
+
+        [Required, Display(Name = "SocialPhobia")]
         public Boolean ReasonSocialPhobia { get; set; }
+
+        [Required, Display(Name = "Stress")]
         public Boolean ReasonStress { get; set; }
+
+        [Required, Display(Name = "Substance Abuse")]
         public Boolean ReasonSubstanceAbuse { get; set; }
+
+        [Required, Display(Name = "Suicide")]
         public Boolean ReasonSuicide { get; set; }
+
+        [Required, Display(Name = "Frequent Caller")]
         public Boolean ReasonFrequentCaller { get; set; }
 
+        [Required, Display(Name = "SADAG Face To Face")]
         public Boolean ReferDASGFaceToFace { get; set; }
+
+        [Required, Display(Name = "Company EAP")]
         public Boolean ReferCompanyEAP { get; set; }
+
+        [Required, Display(Name = "GP")]
         public Boolean ReferGP { get; set; }
+
+        [Required, Display(Name = "Goverenment Hospital")]
         public Boolean ReferGovHospital { get; set; }
+
+        [Required, Display(Name = "Literature Website")]
         public Boolean ReferLiteratureWebsite { get; set; }
-        public Boolean ReferNone { get; set; }
-        public Boolean ReferOther { get; set; }
-        public Boolean ReferOtherNGOHelpline { get; set; }
-        public Boolean ReferPoliceStation { get; set; }
-        public Boolean ReferPrivateHospital { get; set; }
-        public Boolean ReferPsychiatrist { get; set; }
-        public Boolean ReferPsychologist { get; set; }
 
-        public Boolean ReferRapeCrisis { get; set; }
-        public Boolean ReferRehabilitationCentre { get; set; }
-        public Boolean ReferShelter { get; set; }
-        public Boolean ReferSocialWorker { get; set; }
-        public Boolean ReferSupportGroup { get; set; }
-        public Boolean ReferTraumaCentre { get; set; }
-        public Boolean ReferUniversitySupportServices { get; set; }
-
+        [Required, Display(Name = "None")]
+        public Boolean ReferNone { get; set; }        
+        
+        [Required, Display(Name = "Other")]
+        public Boolean ReferOther { get; set; }        
+        
+        [Required, Display(Name = "Other NGO Helpline")]
+        public Boolean ReferOtherNGOHelpline { get; set; }        
+        
+        [Required, Display(Name = "Police Station")]
+        public Boolean ReferPoliceStation { get; set; }        
+        
+        [Required, Display(Name = "Private Hoispital")]
+        public Boolean ReferPrivateHospital { get; set; }        
+        
+        [Required, Display(Name = "Psychiatrist")]
+        public Boolean ReferPsychiatrist { get; set; }        
+        
+        [Required, Display(Name = "Psychologist")]
+        public Boolean ReferPsychologist { get; set; }        
+        
+        [Required, Display(Name = "Rape Crisis")]
+        public Boolean ReferRapeCrisis { get; set; }        
+        
+        [Required, Display(Name = "Rehabilitation Centre")]
+        public Boolean ReferRehabilitationCentre { get; set; }        
+        
+        [Required, Display(Name = "Shelter")]
+        public Boolean ReferShelter { get; set; }        
+        
+        [Required, Display(Name = "Social Worker")]
+        public Boolean ReferSocialWorker { get; set; }        
+        
+        [Required, Display(Name = "Support Group")]
+        public Boolean ReferSupportGroup { get; set; }        
+        
+        [Required, Display(Name = "Trauma Centre")]
+        public Boolean ReferTraumaCentre { get; set; }        
+        
+        [Required, Display(Name = "University Support Services")]
+        public Boolean ReferUniversitySupportServices { get; set; }        
+        
+       
         [Required, Range(1,5), Display(Name = "Distress Rating Start of Call")]
         public int DistressRatingBegining { get; set; }
-        [Required, Range(1,5), Display(Name = "Distress Rating End of Call")]
+        [Required, Range(1,5), Display(Name = "Distress Rating End of Call"),]
         public int DistressRatingEnd { get; set; }
 
-        [Required, MinLength(100), MaxLength(8000), Display(Name = "Call Summary")]
+        [Required, MinLength(100), MaxLength(8000), Display(Name = "Call Summary:")]
         public string CallSummary { get; set; }
 
-        [Required, MinLength(100), MaxLength(8000),Display(Name="Action Points")]
+        [Required, MinLength(100), MaxLength(8000),Display(Name="Action Points:")]
         public string ActionPoints { get; set; }
 
     }
