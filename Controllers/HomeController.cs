@@ -59,6 +59,8 @@ namespace DAISY_6.Controllers
             c.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             // Map The model to the Target Object.
+            // THE MODEL GETS PASSED TO THE API WITH ALL ITS MATCHING PROPERTIES AS IS :)
+            // IT IS JUST JSON AFTERALL :)
 
             var response = c.PostAsJsonAsync("api/SP/", model).Result;
 
