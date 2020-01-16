@@ -11,9 +11,6 @@ using System.IO;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-
-
-
 namespace DAISY_6.Controllers
 {
     public class HomeController : Controller
@@ -52,66 +49,22 @@ namespace DAISY_6.Controllers
             ViewBag.Message = "Add Daisy Case";
             // Call The API To Update the DAISY DATBASE THROUGH THE Stored Proc
 
+
+            // GLOBALIZE THIS HTTP-CLIENT OBJECT (STATIC HTTP-CLIENT OBJECT)  FOR THE APPLICATION 
+            // SO WE DONT RUN OUT OF SOCKETS WHEN UNDER HEAVY LOADS!
+
+
             var c = new HttpClient();
-            c.PostAsJsonAsync();
+            c.BaseAddress = new Uri("https://localhost:44305/");
+            c.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
+            // Map The model to the Target Object.
 
-            using (var client = new HttpClient())
-            using (var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:44305/api/"))
-            using (var httpContent = CreateHttpContent(model))
-            {              
+            var response = c.PostAsJsonAsync("api/SP/", model).Result;
 
-                request.Content = httpContent;
-                // Needs the    
-                client.PostAsJsonAsync
+            // var DaisyCaseNew 
 
-
-
-                using (var response = await client
-                    .SendAsync(request, HttpCompletionOption.ResponseHeadersRead)
-                    .ConfigureAwait(false))
-                {
-                    response.EnsureSuccessStatusCode();
-                }
-              
-            }
-
-            //using (var client = new HttpClient())
-            //using (var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:44305/api/"))
-            //{
-
-
-            //    using (var sw = new StreamWriter(stream, new UTF8Encoding(false), 1024, true))
-            //    using (var jtw = new JsonTextWriter(sw) { Formatting = Formatting.None })
-            //    {
-            //        var js = new JsonSerializer();
-            //        js.Serialize(jtw, value);
-            //        jtw.Flush();
-            //    }
-
-
-
-            //    var json = JsonConvert.SerializeObject(model);
-            //    using (var stringContent = new StringContent(json, Encoding.UTF8, "application/json"))
-            //    {
-            //        request.Content = stringContent;
-
-            //        using (var response = await client
-            //            .SendAsync(request, HttpCompletionOption.ResponseHeadersRead, cancellationToken)
-            //            .ConfigureAwait(false))
-            //        {
-            //            response.EnsureSuccessStatusCode();
-            //        }
-
-            //    }
-            //}
-
-
-
-
-            HttpRequestMessage hrm = new HttpRequestMessage();
-
-
+            // HttpRequestMessage hrm = new HttpRequestMessage();
 
             // hc.BaseAddress = new Uri("/api/sp/AddCase");
             // var InsertRec = hc.PostAsync(model);
@@ -120,11 +73,6 @@ namespace DAISY_6.Controllers
             return View();
 
         }
-
-
-
-
-
 
             public ActionResult Contact()
         {
@@ -135,37 +83,32 @@ namespace DAISY_6.Controllers
         }
 
 
-        private static HttpContent CreateHttpContent(object content)
-        {
-            HttpContent httpContent = null;
+        //private static HttpContent CreateHttpContent(object content)
+        //{
+        //    HttpContent httpContent = null;
 
-            if (content != null)
-            {
-                var ms = new MemoryStream();
-                SerializeJsonIntoStream(content, ms);
-                ms.Seek(0, SeekOrigin.Begin);
-                httpContent = new StreamContent(ms);
-                httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-            }
+        //    if (content != null)
+        //    {
+        //        var ms = new MemoryStream();
+        //        SerializeJsonIntoStream(content, ms);
+        //        ms.Seek(0, SeekOrigin.Begin);
+        //        httpContent = new StreamContent(ms);
+        //        httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+        //    }
 
-            return httpContent;
-        }
+        //    return httpContent;
+        //}
 
-        public static void SerializeJsonIntoStream(object value, Stream stream)
-        {
-            using (var sw = new StreamWriter(stream, new UTF8Encoding(false), 1024, true))
-            using (var jtw = new JsonTextWriter(sw) { Formatting = Formatting.None })
-            {
-                var js = new JsonSerializer();
-                js.Serialize(jtw, value);
-                jtw.Flush();
-            }
-        }
-
-
-
-
-
+        //public static void SerializeJsonIntoStream(object value, Stream stream)
+        //{
+        //    using (var sw = new StreamWriter(stream, new UTF8Encoding(false), 1024, true))
+        //    using (var jtw = new JsonTextWriter(sw) { Formatting = Formatting.None })
+        //    {
+        //        var js = new JsonSerializer();
+        //        js.Serialize(jtw, value);
+        //        jtw.Flush();
+        //    }
+        //}
 
     }
 }
