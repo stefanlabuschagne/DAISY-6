@@ -208,10 +208,10 @@ namespace DAISY_6.Models.ViewModels
         [Required, Display(Name = "University Support Services")]
         public Boolean ReferUniversitySupportServices { get; set; }        
         
-       
-        [Required, Range(1,5), Display(Name = "Distress Rating Start of Call")]
+        
+        [Required, Range(1,5,ErrorMessage ="Enter a value between 1 and 5"), Display(Name = "Distress Rating Start of Call")]
         public int DistressRatingBegining { get; set; }
-        [Required, Range(1,5), Display(Name = "Distress Rating End of Call"),]
+        [Required, Range(1,5, ErrorMessage = "Enter a value between 1 and 5"), Display(Name = "Distress Rating End of Call"),]
         public int DistressRatingEnd { get; set; }
 
         [Required, MinLength(100), MaxLength(8000), Display(Name = "Call Summary:")]
@@ -343,7 +343,9 @@ namespace DAISY_6.Models.ViewModels
         public Boolean ReferSelfHelp { get; set; }
         public Boolean ReferUber { get; set; }
 
+        [Required, Range(0,5)]
         public int DistressRatingBegining { get; set; }
+        [Required, Range(0, 5)]
         public int DistressRatingEnd { get; set; }
 
         [Required, MinLength(100), MaxLength(8000), Display(Name = "Call Summary")]
