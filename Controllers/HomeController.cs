@@ -50,19 +50,16 @@ namespace DAISY_6.Controllers
             // Call The API To Update the DAISY DATBASE THROUGH THE Stored Proc
 
 
-            // GLOBALIZE THIS HTTP-CLIENT OBJECT (STATIC HTTP-CLIENT OBJECT)  FOR THE APPLICATION 
-            // SO WE DONT RUN OUT OF SOCKETS WHEN UNDER HEAVY LOADS!
-
-
-            var c = new HttpClient();
-            c.BaseAddress = new Uri("https://localhost:44305/");
-            c.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             // Map The model to the Target Object.
             // THE MODEL GETS PASSED TO THE API WITH ALL ITS MATCHING PROPERTIES AS IS :)
             // IT IS JUST JSON AFTERALL :)
 
-            var response = c.PostAsJsonAsync("api/SP/", model).Result;
+            // GlobalVariables.WebApiClient.BaseAddress = new Uri("https://localhost:44305/");
+
+            GlobalVariables.WebApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            var response = GlobalVariables.WebApiClient.PostAsJsonAsync("api/SP/", model).Result;
 
             // var DaisyCaseNew 
 

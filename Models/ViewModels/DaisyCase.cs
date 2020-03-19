@@ -18,7 +18,7 @@ namespace DAISY_6.Models.ViewModels
         [Required, Display(Name = "Called For")]
         public string CalledFor { get; set; }
         [Required, Display(Name = "Called Date")]
-        public string CallDate { get; set; }
+        public DateTime CallDate { get; set; }
 
 
 
