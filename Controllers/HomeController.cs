@@ -10,6 +10,7 @@ using System.Text;
 using System.IO;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 
 namespace DAISY_6.Controllers
 {
@@ -32,6 +33,16 @@ namespace DAISY_6.Controllers
 
             ViewBag.Message = "Create Daisy Case";
             // Call The API To Update the DAISY DATBASE THROUGH THE Stored Proc
+
+            // Read this from thje API in Future
+            var daSelectListItems = new List<SelectListItem>
+                {
+                      new SelectListItem { Text = "Exemplo1", Value="Exemplo1" },
+                      new SelectListItem { Text = "Exemplo2", Value="Exemplo2", Selected=true },
+                      new SelectListItem { Text = "Exemplo3", Value="Exemplo3" }
+                };
+
+            ViewData["Counsellors"] = daSelectListItems;
 
             return View();
 
